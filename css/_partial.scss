@@ -1,0 +1,62 @@
+/**
+ * Cytonn Technologies
+ *
+ * @author: Kenneth Thumi<kthumi@cytonn.com>
+ *
+ * Project: code samples
+ *
+ */
+/* color variable declaration */
+$color: #eee;
+/* using mixin that takes in radius as the parameter */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+/* nesting nav element with ul and li elements */
+nav{
+	height:100px;
+	background-color: $color;
+	ul{
+		float:left;
+		margin-top: 20px;
+		li{ 
+			padding: 10px 15px;
+			background-color: #666;
+		    display: inline;
+		    @include border-radius(3px);
+		    a{
+		    	font-size:18px;
+		    	color: black;
+		    }	
+		}
+	}
+	section{
+				ul{
+					float:left;
+					i{
+				    display: inline;
+				    a{
+				    	font-size:12px;
+				    	color: black;
+				    }	
+				}
+		}
+	}
+}
+.panel{
+	padding: 10;
+	background-color: $color;
+}
+/* nesting row class with ul and li tags elements*/
+.row{
+	ul{
+		li{
+			float: left;
+			list-style-type: none;
+			margin-right: 45px;
+		}
+	}
+}
